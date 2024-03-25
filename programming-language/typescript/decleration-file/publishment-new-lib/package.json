@@ -1,0 +1,32 @@
+{
+    "name": "publishment-new-lib",
+    "version": "1.0.0",
+    "description": "A new lib",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "lint": "tslint -p tsconfig.json".
+        "version": "npm run format && git add -A src",
+        "postversion": "git push && git push --tags"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com"
+    },
+    "keywords": [
+        "nam"
+    ],
+    "author": "",
+    "license": "ISC",
+    "files": [
+        "dist/**/*"
+    ],
+    "devDependencies": {
+        "prettier": "^2.4.1",
+        "tslint": "^6.1.3",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^4.4.4"
+    }
+}

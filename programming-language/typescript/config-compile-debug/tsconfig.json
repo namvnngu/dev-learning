@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2018", "DOM"],
+    "sourceMap": true,
+    "outDir": "./dist/js"
+  },
+  "include": ["src/**/*"],
+  "references": [
+    {"path": "./src/interfaces"}
+  ],
+  "watchOptions": {
+    "excludeDirectories": ["**/node_modules", "app"]
+  }
+}

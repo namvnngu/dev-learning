@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "../../dist/js",
+    "sourceMap": true,
+  },
+  "include": ["./index.ts"]
+}

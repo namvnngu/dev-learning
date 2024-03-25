@@ -1,0 +1,25 @@
+.tick line {
+  stroke: #c0c0bb;
+}
+.tick text {
+  fill: #635f5d;
+  cursor: pointer;
+}
+.tick circle {
+  cursor: pointer;
+}
+/* .mark {
+  fill: #137b80;
+} */
+.axis-label {
+  font-size: 2em;
+  fill: #635f5d;
+}
+label,
+select {
+  font-size: 2em;
+}
+select,
+option {
+  font-size: 1em;
+}

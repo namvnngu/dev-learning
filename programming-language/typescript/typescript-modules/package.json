@@ -1,0 +1,17 @@
+{
+  "name": "typescript-modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node ./node_modules/esmodules-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esmodules-dev-server": "0.0.4",
+    "typescript": "^4.4.3"
+  }
+}

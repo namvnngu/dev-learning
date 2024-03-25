@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Basic Raytracing</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      body {
+        line-height: 1.5;
+        width: min(100% - 3rem, 64ch);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 16px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      canvas {
+        outline: 1px solid grey;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html"><button>Back</button></a>
+    <canvas id="canvas" height="600" width="600"></canvas>
+  </body>
+  <script type="text/javascript">
+    // #region scene setup
+    const canvas = document.getElementById("canvas");
+    const canvasContext = canvas.getContext("2d");
+    const canvasBuffer = canvasContext.getImageData(
+      0,
+      0,
+      canvas.width,
+      canvas.height,
+    );
+    const canvasPitch = canvasBuffer.width * 4;
+
+    const CAMERA_POSITION = [0, 0, 0];
+    const VIEWPORT_SIZE = 1;
+    const PROJECTION_PLANE_Z = 1;
+    const BACKGROUND_COLOR = [255, 255, 255];
+    const SPHERES = [
+      new Sphere([0, -1, 3], 1, [255, 0, 0]),
+      new Sphere([2, 0, 4], 1, [0, 0, 255]),
+      new Sphere([-2, 0, 4], 1, [0, 255, 0]),
+    ];
+    // #endregion scene setup
+
+    // #region main
+    for (let x = -canvas.width / 2; x < canvas.width / 2; x++) {
+      for (let y = -canvas.height / 2; y < canvas.height / 2; y++) {
+        const direction = canvasToViewport(x, y);
+        const color = traceRay(CAMERA_POSITION, direction, 1, Infinity);
+        putPixel(x, y, color);
+      }
+    }
+    // update canvas
+    canvasContext.putImageData(canvasBuffer, 0, 0);
+    // #endregion main
+
+    // #region algorithm
+    function canvasToViewport(x, y) {
+      return [
+        (x * VIEWPORT_SIZE) / canvas.width,
+        (y * VIEWPORT_SIZE) / canvas.height,
+        PROJECTION_PLANE_Z,
+      ];
+    }
+
+    function traceRay(origin, direction, minT, maxT) {
+      let closestT = Infinity;
+      let closestSphere = null;
+
+      for (const sphere of SPHERES) {
+        const [t1, t2] = intersectRaySphere(origin, direction, sphere);
+        if (t1 < closestT && minT < t1 && t1 < maxT) {
+          closestT = t1;
+          closestSphere = sphere;
+        }
+        if (t2 < closestT && minT < t2 && t2 < maxT) {
+          closestT = t1;
+          closestSphere = sphere;
+        }
+      }
+
+      return closestSphere?.color ?? BACKGROUND_COLOR;
+    }
+
+    function intersectRaySphere(origin, direction, sphere) {
+      const oc = subtract(origin, sphere.center);
+
+      const a = dotProduct(direction, direction);
+      const b = 2 * dotProduct(oc, direction);
+      const c = dotProduct(oc, oc) - sphere.radius * sphere.radius;
+
+      const delta = b * b - 4 * a * c;
+      if (delta < 0) {
+        return [Infinity, Infinity];
+      }
+
+      const t1 = (-b + Math.sqrt(delta)) / (2 * a);
+      const t2 = (-b - Math.sqrt(delta)) / (2 * a);
+      return [t1, t2];
+    }
+
+    function putPixel(x, y, color) {
+      x = canvas.width / 2 + x;
+      y = canvas.height / 2 - y;
+
+      if (x < 0 || x >= canvas.width || y < 0 || y >= canvas.height) {
+        return;
+      }
+
+      let offset = 4 * x + canvasPitch * y;
+      canvasBuffer.data[offset++] = color[0];
+      canvasBuffer.data[offset++] = color[1];
+      canvasBuffer.data[offset++] = color[2];
+      canvasBuffer.data[offset++] = 255; // Alpha = 255 (full opacity)
+    }
+    // #endregion algorithm
+
+    // #region utils
+    function Sphere(center, radius, color) {
+      this.center = center;
+      this.radius = radius;
+      this.color = color;
+    }
+
+    function dotProduct(v1, v2) {
+      return v1[0] * v2[0] + v1[1] * v2[1] + v1[2] * v2[2];
+    }
+
+    function subtract(v1, v2) {
+      return [v1[0] - v2[0], v1[1] - v2[1], v1[2] - v2[2]];
+    }
+    // #endregion utils
+  </script>
+</html>

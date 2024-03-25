@@ -1,0 +1,19 @@
+.tick line {
+  stroke: #c0c0bb;
+}
+.tick text {
+  fill: #635F5D
+}
+.marks circle {
+  fill: #137B80
+}
+.marks path {
+  stroke: #137B80;
+  stroke-width: 5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.axis-label {
+  font-size: 2em;
+  fill: #635F5D;
+}

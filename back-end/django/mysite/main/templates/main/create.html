@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Create | Nam's Todo List 
+{% endblock %}
+
+{% block content %}
+<h3>Create Page</h3>
+<form action="/create/" method="POST" class="form-group">
+  {% csrf_token %}
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <button type="submit" name="save" class="btn btn-success">Create</button>
+    </div>
+    {{ form.name }}
+  </div>
+</form>
+{% endblock %}

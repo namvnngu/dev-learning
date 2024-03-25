@@ -1,0 +1,51 @@
+{
+    "people": {
+        "4057707b-2d85-41bd-901a-53db02374fa8": {
+            "id": "4057707b-2d85-41bd-901a-53db02374fa8",
+            "firstName": "Nam",
+            "lastName": "Nguyen",
+            "email": "namnguyen@mail.com",
+            "department": "IT",
+            "mobileNumber": "12345123",
+            "age": 20
+        },
+        "adaf5f9b-eced-4c1b-8297-af1edfd0633c": {
+            "id": "adaf5f9b-eced-4c1b-8297-af1edfd0633c",
+            "firstName": "Nax",
+            "lastName": "Nguyex",
+            "email": "namnguyen@mail.com",
+            "department": "IT",
+            "mobileNumber": "12345123",
+            "age": 20
+        }
+    },
+    "users": {
+        "david": {
+            "password": "mypassword",
+            "permissions": {
+                "people": [
+                    "reader",
+                    "writer"
+                ]
+            }
+        },
+        "jessi": {
+            "password": "mypassword",
+            "permissions": {
+                "people": [
+                    "reader"
+                ]
+            }
+        },
+        "dallin": {
+            "password": "mypassword",
+            "permissions": {
+                "people": [
+                    "reader",
+                    "writer",
+                    "deleter"
+                ]
+            }
+        }
+    }
+}
