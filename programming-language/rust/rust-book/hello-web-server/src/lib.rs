@@ -1,6 +1,6 @@
 use std::{
     sync::{mpsc, Arc, Mutex},
-    thread
+    thread,
 };
 
 pub struct ThreadPool {
@@ -38,7 +38,8 @@ impl ThreadPool {
     }
 
     pub fn execute<F>(&self, f: F)
-    where F: FnOnce() + Send + 'static,
+    where
+        F: FnOnce() + Send + 'static,
     {
         let job = Box::new(f);
 
@@ -77,7 +78,7 @@ impl Worker {
                     job();
                 }
                 Err(_) => {
-                    println!("Worker {id} disconnected; shutting down");
+                    println!("Worker {id} disconnected; shutting down.");
                     break;
                 }
             }
@@ -89,4 +90,3 @@ impl Worker {
         }
     }
 }
-
