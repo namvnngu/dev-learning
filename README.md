@@ -56,6 +56,7 @@
 4. [Javascript.Info](https://javascript.info/)
 5. [The Rust Programming Language Book](https://doc.rust-lang.org/book/)
 6. [rustlings](https://github.com/rust-lang/rustlings)
+7. [Learning C with gdb](https://www.recurse.com/blog/5-learning-c-with-gdb)
 
 ### Machine Learning
 
