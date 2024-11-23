@@ -39,6 +39,7 @@
 4. [AWS Basics for Beginners - Full Course](https://youtu.be/ulprqHHWjng) (Digital Cloud Training)
 5. [Django For Beginners - Full Tutorial](https://youtu.be/sm1mokevMWk) (Tech With Tim)
 6. [.NET Microservices – Full Course for Beginners](https://youtu.be/CqCDOosvZIk) (Julio Casal)
+7. [How to implement clean architecture in Golang (EN)](https://medium.com/@rayato159/how-to-implement-clean-architecture-in-golang-en-f50d66378ebf) (Ruangyot Nanchiang)
 
 ### Game Development
 
