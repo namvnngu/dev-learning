@@ -2,10 +2,25 @@
 
 1. [Computer Graphics from Scratch](https://gabrielgambetta.com/computer-graphics-from-scratch) (Gabriel Gambetta)
 
+### Programming Language
 
-### Low-level Programming
+1. [A Tour of Go](https://tour.golang.org/welcome)
+2. [Ruby Programming | In One Video](https://youtu.be/8wZ2ZD--VTk) (Mike Dane)
+3. [Go Tutorial (Golang) for Beginners](https://youtube.com/playlist?list=PL4cUxeGkcC9gC88BEo9czgyS72A3doDeM) (The Net Ninja)
+4. [Javascript.Info](https://javascript.info/)
+5. [The Rust Programming Language Book](https://doc.rust-lang.org/book/)
+6. [rustlings](https://github.com/rust-lang/rustlings)
+7. [Learning C with gdb](https://www.recurse.com/blog/5-learning-c-with-gdb)
+8. [Gist of Go: Concurrency](https://antonz.org/go-concurrency/)
+9. [0DE5](https://www.0de5.net)
 
-1. [0DE5](https://www.0de5.net)
+### Game Development
+
+1. [HTML5 Canvas Tutorials for Beginners | Become a Canvas Pro](https://youtube.com/playlist?list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL) (Chris Courses)
+2. [Java GUI ☕ (NEW)](https://youtu.be/Kmgo00avvEw) (Bro Code)
+3. [Godot 3 Tutorial Series](https://youtube.com/playlist?list=PLS9MbmO_ssyDk79j9ewONxV88fD5e_o5d) (Gamefromscratch)
+4. [lwjglgamedev](https://ahbejarano.gitbook.io/lwjglgamedev/) (ahbejarano)
+5. [Text Draw 3D | raylib](https://github.com/raysan5/raylib/blob/master/examples/text/text_draw_3d.c)
 
 ### Front-end
 
@@ -45,25 +60,6 @@
 5. [Django For Beginners - Full Tutorial](https://youtu.be/sm1mokevMWk) (Tech With Tim)
 6. [.NET Microservices – Full Course for Beginners](https://youtu.be/CqCDOosvZIk) (Julio Casal)
 7. [How to implement clean architecture in Golang (EN)](https://medium.com/@rayato159/how-to-implement-clean-architecture-in-golang-en-f50d66378ebf) (Ruangyot Nanchiang)
-
-### Game Development
-
-1. [HTML5 Canvas Tutorials for Beginners | Become a Canvas Pro](https://youtube.com/playlist?list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL) (Chris Courses)
-2. [Java GUI ☕ (NEW)](https://youtu.be/Kmgo00avvEw) (Bro Code)
-3. [Godot 3 Tutorial Series](https://youtube.com/playlist?list=PLS9MbmO_ssyDk79j9ewONxV88fD5e_o5d) (Gamefromscratch)
-4. [lwjglgamedev](https://ahbejarano.gitbook.io/lwjglgamedev/) (ahbejarano)
-5. [Text Draw 3D | raylib](https://github.com/raysan5/raylib/blob/master/examples/text/text_draw_3d.c)
-
-### Programming Language
-
-1. [A Tour of Go](https://tour.golang.org/welcome)
-2. [Ruby Programming | In One Video](https://youtu.be/8wZ2ZD--VTk) (Mike Dane)
-3. [Go Tutorial (Golang) for Beginners](https://youtube.com/playlist?list=PL4cUxeGkcC9gC88BEo9czgyS72A3doDeM) (The Net Ninja)
-4. [Javascript.Info](https://javascript.info/)
-5. [The Rust Programming Language Book](https://doc.rust-lang.org/book/)
-6. [rustlings](https://github.com/rust-lang/rustlings)
-7. [Learning C with gdb](https://www.recurse.com/blog/5-learning-c-with-gdb)
-8. [Gist of Go: Concurrency](https://antonz.org/go-concurrency/)
 
 ### Machine Learning
 
