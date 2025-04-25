@@ -1,3 +1,7 @@
+### General
+
+1. [0DE5](https://www.0de5.net)
+
 ### Computer Graphics
 
 1. [Computer Graphics from Scratch](https://gabrielgambetta.com/computer-graphics-from-scratch) (Gabriel Gambetta)
@@ -12,7 +16,6 @@
 6. [rustlings](https://github.com/rust-lang/rustlings)
 7. [Learning C with gdb](https://www.recurse.com/blog/5-learning-c-with-gdb)
 8. [Gist of Go: Concurrency](https://antonz.org/go-concurrency/)
-9. [0DE5](https://www.0de5.net)
 
 ### Game Development
 
