@@ -1,6 +1,7 @@
 ### General
 
 1. [0DE5](https://www.0de5.net)
+2. [Hello Algo](https://www.hello-algo.com/en)
 
 ### Computer Graphics
 
