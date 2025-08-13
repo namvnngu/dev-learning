@@ -6,6 +6,7 @@
 ### Computer Graphics
 
 1. [Computer Graphics from Scratch](https://gabrielgambetta.com/computer-graphics-from-scratch) (Gabriel Gambetta)
+2. [Learn OpenGL](https://learnopengl.com)
 
 ### Programming Language
 
