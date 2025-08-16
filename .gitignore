@@ -1,14 +1,4 @@
-node_modules/
 .DS_Store
-./**/*.DS_Store
-**/**/bin/
-*/**/.gradle
-*/**/.idea
-*/**/build
-*/**/dist
-**/django/include/
-**/django/lib/**
-.vscode/
-**/**/.cache/
-*/**/target
-out/
+
+node_modules/
+target/
