@@ -35,8 +35,9 @@ run: $(BIN)
 
 .PHONY: tags
 tags:
-	ctags --kinds-c=+p -R .
+	ctags -R .
+	# ctags --kinds-c=+p -R .
 
 .PHONY: clean
 clean:
-	rm -rf $(DEP) $(OBJ) $(BIN) tags
+	rm -rf $(DEP) $(OBJ) $(BIN)
