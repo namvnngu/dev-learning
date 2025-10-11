@@ -5,7 +5,7 @@ CFLAGS   += -Ilib/glfw/include -Ilib/glad/include
 LDFLAGS  := -framework CoreVideo -framework IOKit -framework Cocoa -framework GLUT -framework OpenGL
 LDLIBS   :=
 
-BIN  := main
+BIN := main
 SRC := $(wildcard *.c) 
 OBJ := $(SRC:.c=.o) lib/glad/src/glad.o lib/glfw/src/libglfw3.a 
 DEP := $(SRC:.c=.d) 

@@ -44,18 +44,6 @@ int main(void) {
     return -1;
   }
 
-  // set up vertex data (and buffer(s)) and configure vertex attributes
-  float vertices[] = {
-    -0.5f, -0.5f, 0.0f, // left
-     0.5f, -0.5f, 0.0f, // right
-     0.0f,  0.5f, 0.0f, // top
-  };
-
-  unsigned int VBO;
-  glGenBuffers(1, &VBO);
-  glBindBuffer(GL_ARRAY_BUFFER, VBO);
-  glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
   // render loop
   while (!glfwWindowShouldClose(window)) {
     // input
