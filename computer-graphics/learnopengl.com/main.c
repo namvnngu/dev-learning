@@ -5,6 +5,12 @@
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
+const char *vertex_shader_source = "#version 330 core\n"
+  "layout (location = 0) in vec3 a_pos;\n"
+  "void main() {\n"
+  "  gl_Position = vec4(a_pos.x, a_pos.y, a_pos.z, 1.0);\n"
+  "}\0";
+
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
 void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
   glViewport(0, 0, width, height);
@@ -44,6 +50,18 @@ int main(void) {
     return -1;
   }
 
+  // vertex shader
+  unsigned int vertex_shader = glCreateShader(GL_VERTEX_SHADER);
+  glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);
+  glCompileShader(vertex_shader);
+  int success;
+  char info_log[512];
+  glGetShaderiv(vertex_shader, GL_COMPILE_STATUS, &success);
+  if (!success) {
+    glGetShaderInfoLog(vertex_shader, 512, NULL, info_log);
+    printf("ERROR::SHADER::VERTEX::COMPILATION_FAILED\n%s\n", info_log);
+  }
+  
   // set up vertex data (and buffer(s)) and configure vertex attributes
   float vertices[] = {
     -0.5f, -0.5f, 0.0f, // left
