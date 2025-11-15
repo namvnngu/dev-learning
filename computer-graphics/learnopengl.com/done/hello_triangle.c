@@ -103,7 +103,7 @@ int main(void) {
   glGenBuffers(1, &VBO);
   glBindVertexArray(VAO);
 
-  // copy our vertices array in a buffer for OpenGL to use
+  // copy our vertices array in a vertex buffer for OpenGL to use
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
   glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
@@ -111,8 +111,9 @@ int main(void) {
   glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
   glEnableVertexAttribArray(0);
 
-  // unbind the VBO as the call to glVertexAttribPointer registered VBO in VAO
+  // unbind the VBO safely as the call to glVertexAttribPointer registered VBO in VAO
   glBindBuffer(GL_ARRAY_BUFFER, 0);
+
   // unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO
   glBindVertexArray(0);
 
