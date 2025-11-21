@@ -1,3 +1,7 @@
+# Dev Learning
+
+## Topics
+
 ### General
 
 1. [0DE5](https://www.0de5.net)
@@ -69,3 +73,7 @@
 ### Machine Learning
 
 1. [Neural Networks from Scratch](https://youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) (sentdex)
+
+## License
+
+[MIT](./LICENSE) License
